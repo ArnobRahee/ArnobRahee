@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "material-design-icons": "^3.0.1",
+    "material-design-icons-iconfont": "^6.1.0",
+    "tailwindcss": "^2.0.3"
+  },
+  "name": "css",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build src/style.css -o public/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Selise</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <link rel="stylesheet" href="assets/css/node_modules/material-design-icons-iconfont/dist/material-design-icons.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,600 display=swap" rel="stylesheet">
+      <link href="assets/css/main.css" rel="stylesheet">
+   </head>
+   <body class="md:flex">
+      <section class="hidden md:block  w-64" id="myDIV">
+         <aside class="h-screen bg-gray-800 fixed z-50 top-0" >
+            <button class="md:hidden focus:outline-none top-0" id="slideHider"><i class="material-icons text-white " onclick="hideslide()">highlight_off</i></button>
+            <div class="pl-12 md:pt-2">
+               <a href="#"><img src="images/logo.svg"  alt="logo"></a>
+            </div>
+            <ul class="md:pt-11 pt-3">
+               <li>
+                  <a href="#" class="text-white flex  pt-3 pb-3  pl-5 pr-3 justify-between bg-blue-900">
+                  <i class="material-icons ">assignment</i> <span class="md:pl-1  font-medium text-sm">Scope manager</span> <i class="material-icons pl-10 ">keyboard_arrow_right</i>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="text-white flex pt-3 pb-3 pl-5 pr-3 justify-between hover:bg-blue-900">
+                  <i class="material-icons ">fact_check</i> <span class="md:pl-3 font-medium text-sm">Document review</span><i class="material-icons pl-10 ">keyboard_arrow_down</i>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="text-white flex  pt-3 pb-3 pl-5 pr-3 justify-between hover:bg-blue-900">
+                  <i class="material-icons ">dns</i> <span class="pr-8 font-medium text-sm">Templates</span> <i class="material-icons pl-10 ">keyboard_arrow_down</i>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="text-white flex pt-3 pb-3 pl-5 pr-3 justify-between hover:bg-blue-900">
+                  <i class="material-icons ">work</i> <span class="pr-16 font-medium text-sm">Client</span> <i class="material-icons pl-10 ">keyboard_arrow_down</i>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="text-white flex  pt-3 pb-3 pl-5 pr-3 justify-between hover:bg-blue-900">
+                  <i class="material-icons ">people</i> <span class="pr-16 text-sm">Users</span> <i class="material-icons pl-10 ">keyboard_arrow_down</i>
+                  </a>
+               </li>
+            </ul>
+         </aside>
+      </section>
+      <section class="w-full">
+         <header class=" border-2 border-t-0  border-r-0 border-l-0 w-full">
+            <div class="flex items-center h-16 md:pl-14 pl-3" id="scope">
+               <div class="flex">
+                  <button  class=" lg:pl-0  focus:outline-none" onclick="myFunction()"><span class="material-icons " >menu</span></button>
+                  <span class="text-gray-700 pl-6 text-base whitespace-nowrap">Scope manager</span>
+               </div>
+               <!--menu in mobile screen starts-->
+               <div class="  flex md:flex flex-grow justify-end   items-center ">
+                  <a href="#" class="md:hidden hover:bg-gray-400 rounded-full"><i class="material-icons text-gray-400 p-2 hover:text-white">notifications</i></a>
+                  <a href="#" class=" md:hidden"><img src="images/person.svg" class="pl-3  mr-1 "></a>
+                  <button class="md:hidden mr-3 focus:outline-none" onclick="showmodal()"><i class="material-icons">more_vert</i></button>
+                  <div class=" border-2 border-t-0 border-b-0  items-center  flex -mr-2 " >
+                     <a href="#" class="h-16 md:block  hidden"><span class="material-icons  text-gray-400 px-6 py-6 -mt-1">notifications</span></a>
+                  </div>
+                  <!--menu in mobile screen ends-->
+                  <div class=" md:flex  hidden" id="showInfo" >
+                     <a href="#" class=" "><img src="images/person.svg" class="pl-3 mr-1" alt="person"></a>
+                     <div class="pl-1 ">
+                        <a href="#" class="xl:block lg:block md:block sm:block hidden" id="showInfo">
+                           <p class="text-sm">Shouvik Mahmud</p>
+                        </a>
+                        <a href="#" class=" xl:block lg:block md:block sm:block hidden" id="showInfo">
+                           <p class="text-xs font-semibold text-gray-400 ">Senior Ux Engineer</p>
+                        </a>
+                     </div>
+                     <a href="#"  class=" xl:block lg:block md:block sm:block hidden" id="showInfo"><span class="material-icons  pt-2  pl-9 mr-3">expand_more</span></a>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <!--modalstarts-->
+         <div class="bg-white    w-full mt-6   z-30 hidden" id="modal">
+            <button class=""><i class="material-icons  pl-2" onclick="hidemodal()">close</i></button>
+            <div class="flex flex-col">
+               <div class="hover:bg-gray-100 w-full bg-gray-50 border-b-2 py-2 border-gray-200">
+                  <a href="#" class="pl-2">Shouvik Mahmud</a>
+               </div>
+               <div class="hover:bg-gray-100 w-full bg-gray-50 py-2 border-b-2 border-gray-200">
+                  <a href="#" class="uppercase text-sm text-gray-400 pl-2">Senior Ux Engineer</a>
+               </div>
+            </div>
+         </div>
+         
+         <!--modalends-->
+         <section class=" md:mt-9 w-full ">
+            <div class=" lg:flex ">
+               <h1 class="text-2xl font-medium text-gray-800 -mt-1 pl-3 md:pl-16 tracking-wider space-x-2 whitespace-nowrap pt-6 md:pt-0" id="table">Scope Manager</h1>
+               <div class=" lg:justify-end lg:flex-grow md:flex    md:pl-0 md:pr-0 pt-6  lg:pt-0 sm:justify-start  pr-6   w-full" >
+                  <form class="flex items-center border-2 w-full pl-3 rounded-l mb-6 md:w-80 mx-3 lg:ml-0 md:ml-14" id="search">
+                     <i class="material-icons text-gray-400 py-2">search</i>
+                     <input type="text" placeholder="Search" class="text-sm font-normal focus:outline-none pr-3 w-full lg:w-72  pl-1   text-gray-500" id="input">
+                     <a href="#" class=" xl:mt-0  h-11 border-l-2 hover:bg-gray-200   " ><i class="material-icons  sm:px-2 sm:py-2 py-3 px-2" >filter_list</i></a>
+                  </form>
+                  <button type="submit" class="uppercase xl:mr-6 ml-3 bg-blue-500 text-white text-sm w-full md:w-48  rounded px-9 h-12 whitespace-nowrap xl:mr-0  hover:bg-blue-600 mr-3 mb-6 sm:mb-0 focus:outline-none">New Document</button>
+               </div>
+            </div>
+         </section>
+         <div class="w-full  md:pl-16  pb-9  sm:pt-3  px-4 lg:pr-6" id="table2">
+            <table class=" lg:rounded    w-full   ml-0  lg:border-separate lg:border-2" cellspacing="0" >
+               <thead class="text-center">
+                  <tr class="uppercase text-xs  ">
+                     <th class=" lg:pt-3.5 lg:pb-4 pt-3  lg:border-b-2 "><span class="flex justify-center ">Document Name<img src="images/arrow_right_alt_24px.svg" class="ml-1 -mt-1"></span></th>
+                     <th class=" lg:pt-3.5 lg:pb-4 py-3  md:border-b-2 mr-3">Client</th>
+                     <th class="  lg:pt-3.5 lg:pb-4 py-3 md:border-b-2 ">Created by</th>
+                     <th class= "lg:pt-3.5 lg:pb-4 py-3 lg:border-b-2 ml-24">Deadline</th>
+                     <th class=" lg:pt-3.5 lg:pb-4 py-3 lg:border-b-2 pl-0">Approvals</th>
+                     <th  class="lg:pt-3.5 lg:pb-4 py-3  border-b-2 text-center pr-14">Status</th>
+                     <th class="lg:pt-3.5 lg:pb-4 py-3 lg:border-b-2"><a href="#"><i class="material-icons pl-3 ">more_vert</i></a></th>
+                  </tr>
+               </thead>
+               <tbody class="thread text-center pt-3 pb-9 border-2 border-t-2  border-color">
+                  <tr class="lg:block hidden ">
+                     <td class=" font-medium uppercase text-gray-400 text-xs block py-2  mr-6" colspan="7">Documents(85)</td>
+                  </tr>
+                  <tr class=" text-xs cursor-pointer hover:bg-gray-100 ">
+                     <td class=" font-normal py-3 pr-1">Laderach Scope 2021</td>
+                     <td class=" font-normal py-3 xl:ml-24">Laderach</td>
+                     <td class="  font-normal py-3 xl:ml-20">Nafees Faraz</td>
+                     <td class=" font-normal py-3 xl:ml-16">12.04.21, 23:59</td>
+                     <td class=" font-normal py-3">2/3</td>
+                     <td  class=" font-normal py-3 text-center xl:ml-6"><label class="bg-yellow-100 px-3 py-2  rounded">Approval pending</label></td>
+                     <td class="py-3"><a href="#" class="ml-4"><i class="material-icons mr-3  opacity-0 hover:opacity-100 hover:bg-gray-400 rounded-full py-1 delay-200">more_vert</i></a></td>
+                  </tr>
+                  <tr class=" text-xs cursor-pointer hover:bg-gray-100">
+                     <td class=" font-normal py-3 pr-1">Laderach Scope 2021</td>
+                     <td class=" font-normal py-3 xl:ml-20">Laderach</td>
+                     <td class="  font-normal py-3 xl:ml-16"> Nafees Faraz</td>
+                     <td class=" font-normal py-3 xl:ml-14">12.04.21, 23:59</td>
+                     <td class="font-normal py-3">-</td>
+                     <td  class="font-normal py-3 lg:pr-20 "><label class="bg-gray-200 px-4 py-2 ml-3 rounded">Draft</label></td>
+                     <td class="py-3"><a href="#" class="ml-4 mt-9"><i class="material-icons mr-3 opacity-0 hover:opacity-100 hover:bg-gray-400 rounded-full py-1 delay-200">more_vert</i></a></td>
+                  </tr>
+                  <tr class=" text-xs cursor-pointer hover:bg-gray-100">
+                     <td class="font-normal py-3 pr-1">Laderach Scope 2021</td>
+                     <td class=" font-normal py-3 xl:ml-20">Laderach</td>
+                     <td class="  font-normal py-3 xl:ml-16"> Nafees Faraz</td>
+                     <td class=" font-normal py-3 xl:ml-14">12.04.21, 23:59</td>
+                     <td class="font-normal py-3">3/3</td>
+                     <td  class=" font-normal py-3 text-center lg:pr-11"><label class="bg-green-200 px-3 py-2  rounded">Approved</label></td>
+                     <td class="py-3"><a href="#" class="ml-4 mt-9"><i class="material-icons mr-3 opacity-0 hover:opacity-100 hover:bg-gray-400 rounded-full py-1 delay-200">more_vert</i></a></td>
+                  </tr>
+                  <tr class=" text-xs cursor-pointer hover:bg-gray-100 ">
+                     <td class=" font-normal py-3 pr-1">Laderach Scope 2021  </td>
+                     <td class=" font-normal py-3 xl:ml-24">Laderach</td>
+                     <td class="  font-normal py-3 xl:ml-20"> Nafees Faraz</td>
+                     <td class=" font-normal py-3 xl:ml-16">12.04.21, 23:59</td>
+                     <td class=" font-normal py-3">2/3</td>
+                     <td  class=" font-normal py-3 text-center xl:ml-6"><label class="bg-yellow-100 px-3 py-2  rounded">Approval pending</label></td>
+                     <td class="py-3"><a href="#" class="ml-4"><i class="material-icons mr-3  opacity-0 hover:opacity-100 hover:bg-gray-400 rounded-full py-1 delay-200">more_vert</i></a></td>
+                  </tr>
+                  <tr class=" text-xs cursor-pointer hover:bg-gray-100">
+                     <td class= "font-normal py-3 pr-1">Laderach Scope 2021</td>
+                     <td class=" font-normal py-3 xl:ml-20">Laderach</td>
+                     <td class="  font-normal py-3 xl:ml-16"> Nafees Faraz</td>
+                     <td class=" font-normal py-3 xl:ml-14">12.04.21, 23:59</td>
+                     <td class="font-normal py-3">2/3</td>
+                     <td  class="font-normal py-3 lg:pr-16 "><label class="bg-red-200 px-3 py-1.5 text-sm text-red-600 ml-3 rounded">Overdue</label></td>
+                     <td class="py-3"><a href="#" class="ml-4 mt-9"><i class="material-icons mr-3 opacity-0 hover:opacity-100 hover:bg-gray-400 rounded-full py-1 delay-200">more_vert</i></a></td>
+                  </tr>
+                  <tr class=" text-xs cursor-pointer hover:bg-gray-100">
+                     <td class=" font-normal py-3 pr-1">Laderach Scope 2021</td>
+                     <td class=" font-normal py-3 xl:ml-20">Laderach</td>
+                     <td class="  font-normal py-3 xl:ml-16"> Nafees Faraz</td>
+                     <td class=" font-normal py-3 xl:ml-14">12.04.21, 23:59</td>
+                     <td class="font-normal py-3">-</td>
+                     <td  class="font-normal py-3 lg:pr-20"><label class="bg-gray-200 px-4 py-2 ml-3 rounded">Draft</label></td>
+                     <td class="py-3"><a href="#" class="ml-4 mt-9"><i class="material-icons mr-3 opacity-0 hover:opacity-100 hover:bg-gray-400 rounded-full py-1 delay-200">more_vert</i></a></td>
+                  </tr>
+                  <tr class=" text-xs cursor-pointer hover:bg-gray-100 ">
+                     <td class=" font-normal py-3 pr-1">Laderach Scope 2021  </td>
+                     <td class=" font-normal py-3 xl:ml-24">Laderach</td>
+                     <td class="  font-normal py-3 xl:ml-20"> Nafees Faraz</td>
+                     <td class=" font-normal py-3 xl:ml-16">12.04.21, 23:59</td>
+                     <td class=" font-normal py-3">2/3</td>
+                     <td  class=" font-normal py-3 text-center xl:ml-6"><label class="bg-yellow-100 px-3 py-2  rounded">Approval pending</label></td>
+                     <td class="py-3"><a href="#" class="ml-4"><i class="material-icons mr-3  opacity-0 hover:opacity-100 hover:bg-gray-400 rounded-full py-1 delay-200">more_vert</i></a></td>
+                  </tr>
+                  <tr class=" text-xs cursor-pointer hover:bg-gray-100">
+                     <td class="font-normal py-3 pr-1">Laderach Scope 2021</td>
+                     <td class=" font-normal py-3 xl:ml-20">Laderach</td>
+                     <td class="  font-normal py-3 xl:ml-16"> Nafees Faraz</td>
+                     <td class=" font-normal py-3 xl:ml-14">12.04.21, 23:59</td>
+                     <td class="font-normal py-3">3/3</td>
+                     <td  class=" font-normal py-3 text-center lg:pr-11"><label class="bg-green-200 px-3 py-2  rounded">Approved</label></td>
+                     <td class="py-3"><a href="#" class="ml-4 mt-9"><i class="material-icons mr-3 opacity-0 hover:opacity-100 hover:bg-gray-400 rounded-full py-1 delay-200">more_vert</i></a></td>
+                  </tr>
+                  <tr class=" text-xs cursor-pointer hover:bg-gray-100">
+                     <td class="font-normal py-3 pr-1">Laderach Scope 2021</td>
+                     <td class=" font-normal py-3 xl:ml-20">Laderach</td>
+                     <td class="  font-normal py-3 xl:ml-16"> Nafees Faraz</td>
+                     <td class=" font-normal py-3 xl:ml-14">12.04.21, 23:59</td>
+                     <td class="font-normal py-3">3/3</td>
+                     <td  class=" font-normal py-3 text-center lg:pr-11"><label class="bg-green-200 px-3 py-2  rounded">Approved</label></td>
+                     <td class="py-3"><a href="#" class="ml-4 mt-9"><i class="material-icons mr-3 opacity-0 hover:opacity-100 hover:bg-gray-400 rounded-full py-1 delay-200">more_vert</i></a></td>
+                  </tr>
+                  <tr class=" text-xs cursor-pointer hover:bg-gray-100 ">
+                     <td class=" font-normal py-3 pr-1">Laderach Scope 2021  </td>
+                     <td class=" font-normal py-3 xl:ml-24">Laderach</td>
+                     <td class="  font-normal py-3 xl:ml-20"> Nafees Faraz</td>
+                     <td class=" font-normal py-3 xl:ml-16">12.04.21, 23:59</td>
+                     <td class=" font-normal py-3">2/3</td>
+                     <td  class=" font-normal py-3 text-center xl:ml-6"><label class="bg-yellow-100 px-3 py-2  rounded">Approval pending</label></td>
+                     <td class="py-3"><a href="#" class="ml-4"><i class="material-icons mr-3  opacity-0 hover:opacity-100 hover:bg-gray-400 rounded-full py-1 delay-200">more_vert</i></a></td>
+                  </tr>
+                  <tr class=" text-xs cursor-pointer hover:bg-gray-100">
+                     <td class="font-normal py-3 pr-1">Laderach Scope 2021</td>
+                     <td class=" font-normal py-3 xl:ml-20">Laderach</td>
+                     <td class="  font-normal py-3 xl:ml-16"> Nafees Faraz</td>
+                     <td class=" font-normal py-3 xl:ml-14">12.04.21, 23:59</td>
+                     <td class="font-normal py-3">3/3</td>
+                     <td  class=" font-normal py-3 text-center lg:pr-11"><label class="bg-green-200 px-3 py-2  rounded">Approved</label></td>
+                     <td class="py-3"><a href="#" class="ml-4 mt-9"><i class="material-icons mr-3 opacity-0 hover:opacity-100 hover:bg-gray-400 rounded-full py-1 delay-200">more_vert</i></a></td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </section>
+      <script type="text/javascript" src="assets/js/script.js"></script>
+   </body>
+</html>

@@ -1,0 +1,65 @@
+@import url("public/styles.css");
+@import url("material-design-icons-iconfont/dist/material-design-icons.css");
+body{
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+
+
+.icons{
+	font-size:18px;
+	
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 280px) and (max-device-width: 1024px)  {
+    
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+		border-radius: 4px;
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+
+		left: -9999px;
+		padding-top: 50px;
+	}
+	
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		
+		
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		padding-top: 5px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Document Name"; }
+	td:nth-of-type(2):before { content: "Client"; }
+	td:nth-of-type(3):before { content: "Created by"; }
+	td:nth-of-type(4):before { content: "Deadline"; }
+	td:nth-of-type(5):before { content: "Approval"; }
+	td:nth-of-type(6):before { content: "Status"; }
+	td:nth-of-type(7):before { content: "Edit"; }
+	
+}

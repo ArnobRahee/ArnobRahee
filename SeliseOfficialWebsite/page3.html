@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Selise</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,600&display=swap" rel="stylesheet">
+       
+           
+           <link href="assets/css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        
+        <body class="lg:flex">
+            <section class="w-64 md:relative hidden lg:block" id="myDIV">
+                <aside class="h-screen bg-gray-800 fixed  z-30  top-0" >
+                   <div class="flex">
+                      <a href="#" class="lg:hidden " id="myDIV"><i class="material-icons text-white " onclick="myFunction()">highlight_off</i></a>
+                      <a href="#"><img src="images/logo.svg" class="pl-12 pt-2" alt="logo"></a>
+                   </div>
+                   <ul class="md:pt-11 pt-3">
+                      <li>
+                         <a href="#" class="text-white flex  pt-3 pb-3  pl-5 pr-3 justify-between bg-blue-900">
+                         <i class="material-icons ">assignment</i> <span class="md:pl-1  font-medium text-sm">Scope manager</span> <i class="material-icons pl-10 ">keyboard_arrow_right</i>
+                         </a>
+                      </li>
+                      <li>
+                         <a href="#" class="text-white flex pt-3 pb-3 pl-5 pr-3 justify-between hover:bg-blue-900">
+                         <i class="material-icons ">fact_check</i> <span class="md:pl-3 font-medium text-sm">Document review</span><i class="material-icons pl-10 ">keyboard_arrow_down</i>
+                         </a>
+                      </li>
+                      <li>
+                         <a href="#" class="text-white flex  pt-3 pb-3 pl-5 pr-3 justify-between hover:bg-blue-900">
+                         <i class="material-icons ">dns</i> <span class="pr-8 font-medium text-sm">Templates</span> <i class="material-icons pl-10 ">keyboard_arrow_down</i>
+                         </a>
+                      </li>
+                      <li>
+                         <a href="#" class="text-white flex pt-3 pb-3 pl-5 pr-3 justify-between hover:bg-blue-900">
+                         <i class="material-icons ">work</i> <span class="pr-16 font-medium text-sm">Client</span> <i class="material-icons pl-10 ">keyboard_arrow_down</i>
+                         </a>
+                      </li>
+                      <li>
+                         <a href="#" class="text-white flex  pt-3 pb-3 pl-5 pr-3 justify-between hover:bg-blue-900">
+                         <i class="material-icons ">people</i> <span class="pr-16 text-sm">Users</span> <i class="material-icons pl-10 ">keyboard_arrow_down</i>
+                         </a>
+                      </li>
+                   </ul>
+                </aside>
+             </section>
+                      
+         <section class="w-full ">         
+            <header class="sm:pl-16 border-2 w-full border-t-0 block border-r-0 pl-3" id="scope">
+                <div class="flex items-center h-16 w-full">
+                   <div class="flex flex-wrap">
+                      <button  class="lg:ml-6 xl:pl-0 xl:-ml-2 focus:outline-none " onclick="myFunction()"><span class="material-icons " >menu</span></button>
+                      <span class="text-gray-900 md:pl-6 pl-3 sm:text-base text-sm  whitespace-nowrap">Scope manager</span>
+                      <span class="text-gray-900 md:pl-2.5 pl-1  m:text-base text-sm"><i class="material-icons ">keyboard_arrow_right</i></span>
+                      <span class="text-gray-900 pl-3 m:text-base text-sm ">New Document</span>
+                   </div>
+                   <div class="flex flex-grow justify-end   items-center ">
+                      <div class=" border-2 border-t-0 border-b-0  items-center  flex -mr-2 " >
+                         <a href="#" class="h-16 md:block  hidden" id="showInfo"><span class="material-icons  text-gray-400 px-6 py-6 -mt-1">notifications</span></a>
+                      </div>
+                       <!--mobile only-->
+                      <a href="#" class="md:hidden hover:bg-gray-400 rounded-full"><i class="material-icons text-gray-400 p-2 hover:text-white">notifications</i></a>
+                      <a href="#" class=" md:hidden w-16"><img src="images/person.svg" class="pl-3  mr-1 "></a>
+                      <button class="md:hidden mr-3 focus:outline-none" onclick="showinfo()"><i class="material-icons">more_vert</i></button>
+                      <!--ends-->
+                      <div class="sm:flex  hidden" id="showInfo" >
+                         <a href="#" class="w-12"><img src="images/person.svg" class="pl-3 mr-1 md:block hidden"></a>
+                         <div class="pl-1 ">
+                            <a href="#" class="md:block  hidden" id="showInfo">
+                               <p class="text-sm whitespace-nowrap">Shouvik Mahmud</p>
+                            </a>
+                            <a href="#" class=" md:block  hidden" id="showInfo">
+                               <p class="text-xs font-semibold text-gray-400 whitespace-nowrap">Senior Ux Engineer</p>
+                            </a>
+                         </div>
+                         <a href="#"  class="md:block  hidden" id="showInfo"><span class="material-icons  pt-2  pl-9 mr-3">expand_more</span></a>
+                      </div>
+                     
+                     
+                     <!--ggggggggggggggggg-->
+                   </div>
+                </div>
+             </header>
+             <!--modalstarts-->
+          <div class="bg-white    w-full mt-6   hidden" id="info" >
+            <button class=""><i class="material-icons  pl-2" onclick="hideinfo()">close</i></button>
+            <div class="flex flex-col">
+               <div class="hover:bg-gray-100 w-full bg-gray-50 border-b-2 py-2 border-gray-200">
+                  <a href="#" class="pl-2">Shouvik Mahmud</a>
+               </div>
+               <div class="hover:bg-gray-100 w-full bg-gray-50 py-2 border-b-2 border-gray-200">
+                  <a href="#" class="uppercase text-sm text-gray-400 pl-2">Senior Ux Engineer</a>
+               </div>
+            </div>
+         </div>
+         
+         <!--modalends-->
+       <section class="md:pl-16 mt-9 w-full pl-0" id="table">
+        <div class=" md:flex ">
+             <span class="lg:text-2xl text-base capitalize text-gray-800 -mt-1 xl:pl-1 pl-3 sm:pl-9  space-x-2 whitespace-nowrap">Emil@Home scope statement</span>
+             <div class="flex md:justify-end md:flex-grow  md:pl-9 sm:pl-9 md:mt-20 xl:pt-0 justify-start lg:mt-0 xl:mt-0 xl:pl-0 xl:pt-0 md:pr-3 sm:justify-start " >
+                <div class="border border-gray-300 rounded-md pr-9 ">
+                    <select class=" pr-12 py-4 pl-6 cursor-pointer appearance-none focus:outline-none  bg-no-repeat bg-right bg-transparent" style="background-image:url('images/arrow_drop_down_24px.svg'); left:-9px;">
+                        <option value="1" class="">Document details</option>
+                        <option value="2" class="">Finializing & review</option>
+                        <option value="3" class="">Scope statement maker</option>
+                       
+                    </select>
+                  </div>
+                    
+               </div>
+                
+        </div>
+        
+     </section>
+     <section class="w-full md:pl-16" id="table2">
+         <div class=" md:pr-6  pt-6 md:border md:border-gray-200 md:mr-3 mt-2.5">
+           <div class="flex lg:justify-between lg:flex-row flex-col xl:pr-24  uppercase pb-3 tracking-widest w-full">
+               <a href="#" class="text-base text-gray-900  border-b-4 pl-6 pr-6 border-gray-900 font-semibold pb-6 tracking-wide">Background & Objective</a>
+               <a href="#" class="text-sm text-gray-400 border-white pl-6 lg:pl-0 mt-6 lg:mt-0 font-semibold border-b-4 justify-center hover:border-gray-900 hover:text-gray-900 tracking-wide">Stake Holders</a>
+               <a href="#" class="text-sm text-gray-400 border-white pl-6 lg:pl-0 mt-6 lg:mt-0 font-semibold border-b-4 justify-center hover:border-gray-900 hover:text-gray-900 tracking-wide">Scope</a>
+               <a href="#" class="text-sm text-gray-400 border-white pl-6 lg:pl-0 mt-6 lg:mt-0 font-semibold border-b-4 justify-center hover:border-gray-900 hover:text-gray-900 tracking-wide">Pricing</a>
+               <a href="#" class="text-sm text-gray-400 border-white pl-6 lg:pl-0 mt-6 lg:mt-0 font-semibold border-b-4 justify-center hover:border-gray-900 hover:text-gray-900 tracking-wide">Timeline</a>
+               <a href="#" class="text-sm text-gray-400 border-white pl-6  lg:pl-0 mt-6 lg:mt-0 font-semibold border-b-4 justify-center hover:border-gray-900 hover:text-gray-900 tracking-wide">Appendix</a>
+               
+           </div>
+           
+         </div>
+         <div class="  mb-6 pt-7 bg-blue-50 xl:mr-3 xl:-mt-3  pb-3 mb-20">
+          <div class="md:flex block">
+              <span class="pl-5  text-gray-900 text-xl font-medium">About the document</span>
+              <div class="ml-5 md:mt-1 mt-9"><label class="bg-gray-200 px-7  py-3.5  ml-2 rounded text-sm">Draft</label></div>
+              <div class="flex flex-grow md:justify-end pr-9 mt-9 md:mt-0 ml-3 md:ml-0">
+                 <button  class="focus:outline-none"><i class="material-icons pl-2 text-gray-400" >question_answer</i></button>
+                 <div class="pl-5 pr-2">
+                    <button class="py-1 px-2 border-2 rounded -mt-3 border-blue-400 text-blue-400 uppercase hover:bg-blue-600 hover:text-white delay-200 focus:outline-none" onclick="showmodal()">Add comment</button>
+                 </div>
+              </div>
+          </div>
+          <!--modalstarts-->
+          <div class="bg-white  fixed rounded lg:w-2/5  w-full pl-9 xl:ml-40 xl:top-52 z-50 hidden" id="modal">
+               <a href="#"><i class="material-icons pt-9 pr-2 float-right" onclick="hidemodal()">close</i></a>
+               <div class="pl-9 pt-20 pr-6">
+                   <span class="text-xl font-medium">Make a comment</span>
+                  <form>
+                    <textarea class="border-2 appearance-none placeholder-gray-300  rounded mt-6 focus:outline-none pl-1 pt-3 w-full h-36"placeholder="Type your comment here">
+
+                    </textarea>
+                    <div class="w-full flex mt-9 h-12 border rounded">
+                        <input placeholder="Assign to" class=" focus:outline-none border-r-0 w-full h-9 pt-4 pl-4 pr-6 placeholder-gray-500 pb-2 ">
+                        <i class="material-icons   pt-4  pr-3 -ml-1 text-gray-400 ">search</i>
+                    </div>
+                    <div class="w-full ">
+                        <div class="float-right pt-9 pb-9 ">
+                            <button class="font-semibold text-sm text-blue-600 focus:outline-none uppercase" onclick="hidemodal()">Cancel</button>
+                            <button class="py-3.5 px-11 bg-blue-700 rounded text-white font-semibold text-sm ml-9 hover:bg-blue-800 delay-200 uppercase">Post</button>
+                        </div>
+                        
+                    </div>
+                    
+                   
+
+                </form>
+               </div>
+                  
+               
+          </div>
+           <!--modalends-->
+           <!--overlay-->
+           <div class="xl:inset-0 bg-black fixed opacity-70 z-40 hidden" id="overlay"></div>
+           <!--overlayends-->
+
+        
+        
+         <!-- <img src="images/microsoft.png" class="pl-3 pr-9 mt-10 w-full ">-->
+          <div class="md:flex mt-16 pt-9 border-t-8 pb-6 block">
+            <span class="pl-7 tracking-tighter text-gray-900 text-lg">Executive Summary</span>
+            <div class="ml-5 md:mt-1 mt-9"><label class="bg-gray-200 px-7  py-3.5  ml-2 rounded text-sm">Draft</label></div>
+            <div class="flex flex-grow md:justify-end pr-9 mt-9 md:mt-0 ml-6">
+                <button class="focus:outline-none"><i class="material-icons pl-2 text-gray-400" >question_answer</i></button>
+               <div class="pl-4">
+                  <button class="py-1 px-2 border-2 rounded -mt-3 border-blue-400 text-blue-400 uppercase hover:bg-blue-600 hover:text-white delay-200 focus:outline-none"onclick="showmodal()">Add comment</button>
+               </div>
+            </div>
+        </div>
+        </div>
+     </section>
+     </section>
+    
+    
+     <div class="w-full  sm:flex  justify-end  pb-3 shadow-2xl hidden   pt-3 border-gray-400 fixed bottom-0 xl:pr-3 pr-1 pr-0 bg-white">
+        <button class="pr-10 text-blue-700 uppercase">Discard</button>
+      <button class="mr-5 uppercase bg-blue-300 text-blue-600 py-3.5 px-5 rounded uppercase hover:bg-blue-600 hover:text-blue-300 ">Download as PDF</button>
+      <button class=" bg-blue-700 text-white  py-3.5 px-11 rounded uppercase hover:bg-blue-800   focus:border-blue-300 delay-200 ">Save</button>
+    
+      
+ </div>
+ <div class="flex sm:hidden flex-col pr-3 pl-3 pb-20">
+    <button class="pr-10 text-blue-700 uppercase bg-pink-100 hover:bg-blue-700 hover:text-pink-100 py-3.5">Discard</button>
+    <button class="mr-5 uppercase bg-blue-300 text-blue-600 font-bold py-3.5 px-5 w-full mt-6 rounded uppercase hover:bg-blue-600 hover:text-blue-300 ">Download as PDF</button>
+    <button class=" bg-blue-700 text-white mt-6 px-1 py-3.5 rounded uppercase hover:bg-blue-800 focus:ring focus:border-blue-300 delay-200 ">Save</button>
+  
+ </div>
+    
+ <script type="text/javascript" src="assets/js/script.js"></script>
+    </body>
+</html>

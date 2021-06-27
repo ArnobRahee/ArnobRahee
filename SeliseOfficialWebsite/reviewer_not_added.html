@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Selise</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <link rel="stylesheet" href="assets/css/node_modules/material-design-icons-iconfont/dist/material-design-icons.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,600&display=swap" rel="stylesheet">
+      <link href="assets/css/main.css" rel="stylesheet">
+   </head>
+   </head>
+   <body class="md:flex">
+      <section class="w-64 md:relative hidden md:block" id="myDIV">
+         <aside class="h-screen bg-gray-800 fixed  z-50  top-0" >
+            <div class="flex">
+               <a href="#" class="md:hidden " id="myDIV"><i class="material-icons text-white " onclick="myFunction()">highlight_off</i></a>
+               <a href="#"><img src="images/logo.svg" class="pl-12 pt-2" alt="logo"></a>
+            </div>
+            <ul class="md:pt-11 pt-3">
+               <li>
+                  <a href="#" class="text-white flex  pt-3 pb-3  pl-5 pr-3 justify-between bg-blue-900">
+                  <i class="material-icons ">assignment</i> <span class="md:pl-1  font-medium text-sm">Scope manager</span> <i class="material-icons pl-10 ">keyboard_arrow_right</i>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="text-white flex pt-3 pb-3 pl-5 pr-3 justify-between hover:bg-blue-900">
+                  <i class="material-icons ">fact_check</i> <span class="md:pl-3 font-medium text-sm">Document review</span><i class="material-icons pl-10 ">keyboard_arrow_down</i>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="text-white flex  pt-3 pb-3 pl-5 pr-3 justify-between hover:bg-blue-900">
+                  <i class="material-icons ">dns</i> <span class="pr-8 font-medium text-sm">Templates</span> <i class="material-icons pl-10 ">keyboard_arrow_down</i>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="text-white flex pt-3 pb-3 pl-5 pr-3 justify-between hover:bg-blue-900">
+                  <i class="material-icons ">work</i> <span class="pr-16 font-medium text-sm">Client</span> <i class="material-icons pl-10 ">keyboard_arrow_down</i>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="text-white flex  pt-3 pb-3 pl-5 pr-3 justify-between hover:bg-blue-900">
+                  <i class="material-icons ">people</i> <span class="pr-16 text-sm">Users</span> <i class="material-icons pl-10 ">keyboard_arrow_down</i>
+                  </a>
+               </li>
+            </ul>
+         </aside>
+      </section>
+      <section class="w-full">
+         <header class="sm:pl-16 border-2 w-full border-t-0 block border-r-0 pl-3" id="scope">
+            <div class="flex items-center h-16 w-full">
+               <div class="flex flex-wrap">
+                  <button  class="lg:ml-6 xl:pl-0 xl:-ml-2 focus:outline-none " onclick="myFunction()"><span class="material-icons " >menu</span></button>
+                  <span class="text-gray-900 md:pl-6 pl-3 sm:text-base text-sm  whitespace-nowrap">Scope manager</span>
+                  <span class="text-gray-900 md:pl-2.5 pl-1  m:text-base text-sm"><i class="material-icons ">keyboard_arrow_right</i></span>
+                  <span class="text-gray-900 pl-3 m:text-base text-sm ">New Document</span>
+               </div>
+               <div class="flex flex-grow justify-end   items-center ">
+                  <div class=" border-2 border-t-0 border-b-0  items-center  flex -mr-2 " >
+                     <a href="#" class="h-16 md:block px-6 py-6 hidden" id="showInfo"><span class="material-icons  text-gray-400  -mt-1">notifications</span></a>
+                  </div>
+                  <!--mobile only-->
+                  <a href="#" class="md:hidden hover:bg-gray-400 rounded-full"><i class="material-icons text-gray-400 p-2 hover:text-white">notifications</i></a>
+                  <a href="#" class=" md:hidden w-16"><img src="images/person.svg" class="  mr-1 "></a>
+                  <button class="md:hidden  focus:outline-none" onclick="showmodal()"><i class="material-icons">more_vert</i></button>
+                  <!--ends-->
+                  <div class="sm:flex  hidden" id="showInfo" >
+                     <a href="#" class="w-12"><img src="images/person.svg" class="pl-3 mr-1 md:block hidden"></a>
+                     <div class="pl-1 ">
+                        <a href="#" class="md:block  hidden" id="showInfo">
+                           <p class="text-sm whitespace-nowrap">Shoumik Mahmud</p>
+                        </a>
+                        <a href="#" class=" md:block  hidden" id="showInfo">
+                           <p class="text-xs font-semibold text-gray-400 whitespace-nowrap">Senior UX Engineer</p>
+                        </a>
+                     </div>
+                     <a href="#"  class="md:block  hidden" id="showInfo"><span class="material-icons  pt-2  pl-9 mr-3">expand_more</span></a>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <!--modalstarts-->
+         <div class="bg-white    w-full mt-6   z-30 hidden" id="modal">
+            <button class=""><i class="material-icons  pl-2" onclick="hidemodal()">close</i></button>
+            <div class="flex flex-col">
+               <div class="hover:bg-gray-100 w-full bg-gray-50 border-b-2 py-2 border-gray-200">
+                  <a href="#" class="pl-2">Julian Weber</a>
+               </div>
+               <div class="hover:bg-gray-100 w-full bg-gray-50 py-2 border-b-2 border-gray-200">
+                  <a href="#" class="uppercase text-sm text-gray-400 pl-2">Senior UX Engineer</a>
+               </div>
+            </div>
+         </div>
+         <!--modalends-->
+         <section class="md:pl-16  mt-9 w-full pl-0" id="table">
+            <div class=" xl:flex ">
+               <h1 class="md:text-2xl text-base font-medium capitalize text-gray-800 -mt-1 xl:pl-1 pl-9 whitespace-nowrap space-x-2">Emil@Home scope statement</h1>
+               <div class="flex xl:justify-end xl:flex-grow  xl:pt-0 justify-start xl:mt-0 mt-6 md:ml-0 ml-3 " >
+                  <div class="border border-gray-300 rounded-md lg:mr-3 pl-6 pr-6" id="search">
+                     <select class=" md:pr-12 pr-3 py-4 md:pl-6 pl-1 cursor-pointer appearance-none focus:outline-none  bg-no-repeat bg-right bg-transparent" style="background-image:url('images/arrow_drop_down_24px.svg'); left:-9px;">
+                        <option value="1" class="">Document details</option>
+                        <option value="2" class="">Finializing & review</option>
+                        <option value="3" class="">Scope statement maker</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class=" pt-2 md:pl-16 px-3 md:px-0  xl:mt-0 mt-6 pr-0 md:pr-3 pr-3 pb-20" id="table2">
+            <div class="border-2 md:pr-9 pr-0 w-full" >
+               <div class="pt-6 ">
+                  <span class="text-gray-800 font-medium text-xl  pl-4">Finalizing & Review</span>
+               </div>
+               <div class="flex justify-between flex-wrap pt-9 pb-20  pl-4">
+                  <div>
+                     <h1 class="text-xs  font-bold">Document title</h1>
+                     <div class="pt-1 w-40 text-gray-500">
+                        <span class="text-sm ">Emil@Home scope statement</span>
+                     </div>
+                     <div class="pt-6">
+                        <h1 class="text-xs  font-bold tracking-wide">Project client</h1>
+                        <div class="pt-1 w-40 text-gray-500">
+                           <span class="text-sm ">SV Group</span>
+                        </div>
+                     </div>
+                     <div class="pt-6">
+                        <h1 class="text-xs  font-bold tracking-wide">Project deadline</h1>
+                        <div class="pt-1 w-40 text-gray-500">
+                           <span class="text-sm ">16.02.2021</span>
+                        </div>
+                     </div>
+                     <div class="pt-6">
+                        <h1 class="text-xs  font-bold tracking-wide">Cover Photo</h1>
+                        <img src="images/coverphoto.png" class="mt-3">
+                        <div class="pt-1 w-40 text-gray-500 pt-3">
+                           <span class="text-sm ">Business Consulting</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="xl:pt-0 pt-6">
+                     <h1 class="text-xs  font-bold tracking-wide">Shared with</h1>
+                     <div class="text-sm w-56 pt-1">
+                        <span>Nabil Adnan, Nafees Faraz, Bobby Leu, Rajiv Hasan &</span><br>
+                        <a href="#" class="underline text-blue-400">4 others</a>
+                     </div>
+                     <div class="pt-6 ">
+                        <h1 class="text-xs tracking-wide font-bold">Short description</h1>
+                        <p class="text-sm w-60 pt-1 leading-5">
+                           Gravida non mauris non lacus morbi elementum lobortis. In non mattis habitant lectus. 
+                           Purus quis tellus egestas dis ut. Vel, maecenas vel tortor aliquet massa. 
+                           Arcu fames mattis consectetur sagittis, tempor odio elementum, fermentum amet. 
+                           Nisl justo, nibh amet mattis iaculis vel. Nunc amet, volutpat tempor suspendisse. 
+                        </p>
+                     </div>
+                  </div>
+                  <div class="xl:pt-0 pt-6">
+                     <h1 class="text-xs tracking-wide font-bold ">Reviewer</h1>
+                     <span class="text-sm">Not added</span>
+                     <div class="flex border-2 rounded pt-2  w-64 sm:w-80 md:pr-0   mt-5 ">
+                        <form class="md:w-full w-56 pr-6">
+                            <input type="text" class="focus:outline-none pl-3 w-56   pt-1 py-3" placeholder="Add document reviewer*">
+                        </form>
+                        <i class="material-icons text-gray-300 md:pr-6 pr-0  pl-0  pt-2">search</i>
+                     </div>
+                     <div class="pt-1 flex">
+                        <span class="flex text-sm bg-blue-100 py-0.5 pl-1.5 rounded-xl">Julian Weber <button class="pl-2 pr-1 focus:outline-none"><i class="material-icons text-gray-600  icons">remove_circle</i></button></span>
+                        <span class="flex text-sm bg-blue-100 py-0.5 pl-1.5 ml-1 rounded-xl">Rajiv Hasan <button class="pl-2 pr-1 focus:outline-none"><i class="material-icons text-gray-600 icons">remove_circle</i></button></span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </section>
+      <div class="w-full  sm:flex  justify-end  pb-3 shadow-2xl hidden   pt-3 border-gray-400 fixed bottom-0 xl:pr-3 pr-1 pr-0 bg-white">
+         <button class="pr-10 text-blue-700 uppercase">Discard</button>
+         <button class="mr-5 uppercase bg-blue-300 text-blue-600 py-3.5 px-5 rounded uppercase hover:bg-blue-600 hover:text-blue-300 ">Download as PDF</button>
+         <button class=" bg-blue-700 text-white py-3.5 px-11 rounded uppercase hover:bg-white hover:text-blue-600  focus:border-blue-300 delay-200 ">Save</button>
+      </div>
+      <div class="flex sm:hidden flex-col pr-3 pl-3 pb-20">
+         <button class="pr-10 text-blue-700 uppercase bg-pink-100 hover:bg-blue-700 hover:text-pink-100 py-3.5">Discard</button>
+         <button class="mr-5 uppercase bg-blue-300 text-blue-600 font-bold py-3.5 px-5 w-full mt-6 rounded uppercase hover:bg-blue-600 hover:text-blue-300 ">Download as PDF</button>
+         <button class=" bg-blue-700 text-white mt-6 px-1 py-3.5 rounded uppercase hover:bg-white hover:text-blue-600 focus:ring focus:border-blue-300 delay-200 ">Save</button>
+      </div>
+      <script type="text/javascript" src="assets/js/script.js"></script>
+   </body>
+</html>
