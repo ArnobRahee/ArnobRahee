@@ -1,0 +1,12 @@
+pwd
+ls
+cd desktop
+$cat amar.txt
+$ tr -c 'A-Z' '\n' < amar.txt
+$ tr -sc 'A-Z' '\n' < amar.txt
+$ tr -sc 'A-Za-z' '\n' < amar.txt
+$ tr -sc 'A-Za-z0-9' '\n' < amar.txt
+$ tr -sc 'A-Za-z' '\n' < amar.txt |sort
+$ tr -sc 'A-Za-z' '\n' < amar.txt |sort |uniq
+$ tr -sc 'A-Za-z' '\n' < amar.txt |sort |uniq -c
+$ tr -sc 'A-Za-z' '\n' < amar.txt | tr A-Z a-z | sort| uniq -c
